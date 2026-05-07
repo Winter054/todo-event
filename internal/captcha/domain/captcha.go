@@ -36,6 +36,11 @@ type VerifiedPayload struct {
 	ID bson.ObjectID `bson:"_id" json:"id"`
 }
 
+type VerifiedLokiPayload struct {
+	ID        bson.ObjectID `json:"id"`
+	CreatedAt time.Time     `json:"created_at"`
+}
+
 type FailedPayload struct {
 	ID     bson.ObjectID `bson:"_id"    json:"id"`
 	Reason string        `bson:"reason" json:"reason"`

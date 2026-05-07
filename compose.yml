@@ -121,7 +121,9 @@ services:
     ports:
       - "3010:3010"
     environment:
+      AMQP_URL: amqp://guest:guest@rabbitmq:5672/
       MONGO_URI: mongodb://root:root@mongo:27017
+      LOKI_URL: http://loki:3100
     depends_on:
       mongo:
         condition: service_healthy
